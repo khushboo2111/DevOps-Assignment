@@ -35,6 +35,9 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
+  
+      - name: Image selection
+        run: echo ${{github.event.inputs.dockerImage}}
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
